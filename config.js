@@ -1,4 +1,4 @@
-// Isi setelah menerbitkan Google Apps Script. Jangan masukkan kata sandi di sini.
+
 window.NFC_REVIEW_CONFIG = {
-  API_URL: "PASTE_URL_WEB_APP_GOOGLE_APPS_SCRIPT_DI_SINI"
+  API_URL: "https://script.google.com/macros/s/AKfycbzRPks6249ZigcCpv5Vj6o2-tm9fpzUfOEuoWJ2gBnYebrWRLB5SdhEOr9zRPZk6sPf/exec"
 };
