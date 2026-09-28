@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6750a4" />
+    <title>Reset Google Review</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">NFC REVIEW</p>
+      <section class="card">
+        <h1>Reset alamat Google Review</h1>
+        <p class="muted centered">Kode kartu: <strong id="card-id">—</strong></p>
+        <form id="reset-form" hidden>
+          <label>Link langsung tulis ulasan Google yang baru<input name="reviewUrl" type="url" required placeholder="https://g.page/r/.../review" /></label>
+          <p class="hint">Gunakan link “Minta ulasan” dari Google Business Profile.</p>
+          <label>Masukkan PIN kartu<input name="pin" required inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" placeholder="••••" /></label>
+          <button type="submit">Simpan alamat baru</button>
+        </form>
+        <p id="status" class="muted centered">Memeriksa kode kartu…</p>
+      </section>
+      <p class="footer">Hanya untuk pemilik kartu</p>
+    </main>
+    <dialog id="modal"><div id="modal-content"></div><button id="modal-close" type="button">Tutup</button></dialog>
+    <script src="config.js"></script>
+    <script src="reset.js"></script>
+  </body>
+</html>

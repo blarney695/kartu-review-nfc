@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#6750a4" />
+    <title>Aktivasi Kartu Review</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">NFC REVIEW</p>
+      <section class="card" aria-live="polite">
+        <div id="loading" class="loading">Memeriksa kartu…</div>
+
+        <div id="activation" hidden>
+          <h1>Aktivasi Kartu</h1>
+          <p class="muted">Kode kartu: <strong id="activation-card-id"></strong></p>
+          <form id="activation-form">
+            <label>Nama toko<input name="storeName" required maxlength="80" placeholder="Contoh: Kopi Senja" /></label>
+            <label>Link langsung tulis ulasan Google<input name="reviewUrl" type="url" required placeholder="https://g.page/r/.../review" /></label>
+            <p class="hint">Gunakan tautan “Minta ulasan” dari Profil Bisnis Google agar pelanggan langsung ke formulir ulasan.</p>
+            <label>Nomor WhatsApp untuk masukan privat<input name="whatsapp" required inputmode="numeric" placeholder="628123456789" /></label>
+            <label>PIN 4–8 digit untuk edit kartu<input name="pin" required inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" placeholder="••••" /></label>
+            <button type="submit">Aktifkan kartu</button>
+          </form>
+        </div>
+
+        <div id="review" hidden>
+          <p class="store-label">ULASAN UNTUK</p>
+          <h1 id="store-name"></h1>
+          <p id="review-prompt">Bagaimana pengalaman Anda hari ini?</p>
+          <div class="stars" role="group" aria-label="Pilih penilaian bintang">
+            <button type="button" data-rating="1" aria-label="1 bintang">★</button><button type="button" data-rating="2" aria-label="2 bintang">★</button><button type="button" data-rating="3" aria-label="3 bintang">★</button><button type="button" data-rating="4" aria-label="4 bintang">★</button><button type="button" data-rating="5" aria-label="5 bintang">★</button>
+          </div>
+          <p id="rating-copy" class="muted">Pilih bintang di atas.</p>
+          <div id="feedback-actions" class="actions" hidden>
+            <a id="google-review-link" class="button-link primary" target="_blank" rel="noopener">Tulis ulasan di Google</a>
+            <a id="whatsapp-link" class="button-link secondary" target="_blank" rel="noopener">Kirim masukan privat via WhatsApp</a>
+            <p class="hint centered">Kedua pilihan tersedia untuk semua penilaian.</p>
+          </div>
+        </div>
+
+        <div id="not-found" hidden>
+          <h1>Kode kartu belum tersedia</h1>
+          <p class="muted">Pindai QR/NFC yang sudah diprogram dengan kode kartu, misalnya <code>?c=KARTU001</code>.</p>
+        </div>
+      </section>
+      <p class="footer">Kartu review digital</p>
+    </main>
+
+    <dialog id="modal"><div id="modal-content"></div><button id="modal-close" type="button">Tutup</button></dialog>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

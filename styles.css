@@ -1,0 +1,27 @@
+:root { color-scheme: light; font-family: Inter, system-ui, sans-serif; color: #202124; background: #f6f3ff; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 24px; }
+.shell { width: min(100%, 460px); text-align: center; }
+.eyebrow, .store-label { margin: 0 0 10px; color: #6750a4; font-weight: 800; letter-spacing: .13em; font-size: .75rem; }
+.card { background: #fff; border-radius: 28px; padding: 34px 26px; box-shadow: 0 16px 45px #2e1e5a22; text-align: left; }
+h1 { margin: 0 0 8px; text-align: center; font-size: clamp(1.65rem, 7vw, 2.2rem); }
+.store-label, #review-prompt, .centered { text-align: center; }
+.muted, .hint { color: #5f6368; line-height: 1.45; }
+.hint { font-size: .82rem; margin: -4px 0 17px; }
+form { display: grid; gap: 16px; margin-top: 24px; }
+label { display: grid; gap: 7px; color: #3c4043; font-weight: 700; font-size: .87rem; }
+input { width: 100%; border: 1px solid #c7c2d6; border-radius: 12px; padding: 13px; font: inherit; }
+input:focus { outline: 3px solid #d9ccff; border-color: #6750a4; }
+button, .button-link { border: 0; border-radius: 999px; cursor: pointer; padding: 14px 18px; font: 700 1rem inherit; text-align: center; text-decoration: none; }
+form button, .primary { background: #6750a4; color: #fff; }
+.secondary { background: #eee9fa; color: #4e3b83; }
+.stars { display: flex; justify-content: center; gap: 5px; margin: 26px 0 10px; }
+.stars button { background: transparent; color: #d7d0e7; padding: 0; font-size: clamp(2.8rem, 13vw, 4rem); line-height: 1; transition: transform .15s, color .15s; }
+.stars button:hover, .stars button.active { color: #f4b400; transform: scale(1.08); }
+.actions { display: grid; gap: 12px; margin-top: 24px; }
+.footer { color: #6b6477; font-size: .82rem; }
+.loading { text-align: center; color: #6750a4; font-weight: 700; }
+dialog { border: 0; border-radius: 20px; max-width: min(90vw, 380px); padding: 24px; box-shadow: 0 20px 60px #0004; }
+dialog::backdrop { background: #20143488; }
+#modal-close { width: 100%; background: #6750a4; color: #fff; margin-top: 15px; }
+code { font-size: .9em; }
