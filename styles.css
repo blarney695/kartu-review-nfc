@@ -25,3 +25,6 @@ dialog { border: 0; border-radius: 20px; max-width: min(90vw, 380px); padding: 2
 dialog::backdrop { background: #20143488; }
 #modal-close { width: 100%; background: #6750a4; color: #fff; margin-top: 15px; }
 code { font-size: .9em; }
+
+textarea { width: 100%; min-height: 112px; resize: vertical; border: 1px solid #c7c2d6; border-radius: 12px; padding: 13px; font: inherit; }
+textarea:focus { outline: 3px solid #d9ccff; border-color: #6750a4; }
